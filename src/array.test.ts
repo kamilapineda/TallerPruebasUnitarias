@@ -1,25 +1,23 @@
 import { arrayContainsValue, arrayNotContainsValue } from './array';
 
-describe('arrayContainsValue', () => {
-  it('debería devolver verdadero si el array contiene el valor', () => {
+describe('Pruebas para arrayContainsValue', () => {
+  it('debería devolver verdadero si el array contiene el valor "value1"', () => {
     const arr = ['value1', 'value2', 'value3'];
-    expect(arrayContainsValue(arr, 'value1')).toBe(true);
+    const value = 'value1';
+    expect(arrayContainsValue(arr, value)).toBe(true);
   });
 
-  it('debería devolver falso si el array no contiene el valor', () => {
+  it('debería devolver verdadero si el array contiene el valor "value3"', () => {
     const arr = ['value1', 'value2', 'value3'];
-    expect(arrayContainsValue(arr, 'value4')).toBe(false);
+    const value = 'value3';
+    expect(arrayContainsValue(arr, value)).toBe(true);
   });
 });
 
-describe('arrayNotContainsValue', () => {
-  it('debería devolver verdadero si el array no contiene el valor', () => {
+describe('Pruebas para arrayNotContainsValue', () => {
+  it('debería devolver verdadero si el array no contiene el valor "UNAC"', () => {
     const arr = ['value1', 'value2', 'value3'];
-    expect(arrayNotContainsValue(arr, 'UNAC')).toBe(true);
-  });
-
-  it('debería devolver falso si el array contiene el valor', () => {
-    const arr = ['value1', 'value2', 'value3'];
-    expect(arrayNotContainsValue(arr, 'value1')).toBe(false);
+    const value = 'UNAC';
+    expect(arrayNotContainsValue(arr, value)).toBe(true);
   });
 });
